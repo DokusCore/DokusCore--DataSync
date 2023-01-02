@@ -3,25 +3,19 @@
 --------------------------------------------------------------------------------
 RegisterServerEvent('DokusCore:Sync:Set:ObjectData')
 AddEventHandler('DokusCore:Sync:Set:ObjectData', function(a)
-  if (Low(a[1]) == 'intobjects') then SetIntObjects(a[2]) end
+  if (Low(a[1]) == 'interactable') then SetIntObjects(a[2]) end
 end)
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-RegisterServerEvent('DokusCore:Sync:Add:ObjectData')
-AddEventHandler('DokusCore:Sync:Add:ObjectData', function(a)
-  if (Low(a[1]) == 'intobjects') then AddIntObjects(a[2]) end
+RegisterServerEvent('DokusCore:Sync:Del:ObjectData')
+AddEventHandler('DokusCore:Sync:Del:ObjectData', function(a)
+  if (Low(a[1]) == 'interactable') then DelIntObjects(a[2][1]) end
 end)
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 RegisterServerEvent('DokusCore:Sync:Set:SystemData')
 AddEventHandler('DokusCore:Sync:Set:SystemData', function(a)
   if (Low(a[1]) == 'systemready') then _Sys.SystemReady = a[2] end
-end)
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-RegisterServerEvent('DokusCore:Sync:Del:ObjectData')
-AddEventHandler('DokusCore:Sync:Del:ObjectData', function(a)
-  if (Low(a[1]) == 'intobjects') then DelIntObjects(a[2][1]) end
 end)
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
